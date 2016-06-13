@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bbl:ExceptionResponse xmlns:htlk="http://schemas.klm.com.au">
+    <Exception>
+        <Code>10023008</Code>
+        <Message>Caught exception and rethrowing</Message>
+        <Description>STD CODE MUST BE ENTERED IF THE INPUT IS 8 DIGITS LONG</Description>
+    </Exception>
+</bbl:ExceptionResponse>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<abc:AliasRequest>
+  <AliasDetails>
+    <Identifier>
+      <Type>EMAL</Type>
+      <Value>bill.blogs@bendigobank.com.au</Value>
+    </Identifier>
+    <Servicer>X2P</Servicer>
+    <Name>Terry Towling</Name>
+    <Servicer>BANKATSTXXX</Servicer>
+    <Account_details>
+      <Identification>123</Identification>
+      <Scheme_name>
+        <Code>AN</Code>
+        <Proprietary/>
+      </Scheme_name>
+      <Issuer>00</Issuer>
+      <AccountOwner>Account owner name</AccountOwner>
+    </Account_details>
+  </AliasDetails>
+  <AuditDetails>
+    <UserId>adm00</UserId>
+  </AuditDetails>
+  <Customer>
+    <CustomerIdentifier>1234567890</CustomerIdentifier>
+  </Customer>
+</abc:AliasRequest>

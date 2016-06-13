@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bbb:MaintainSecurityRequest xmlns:htlk="http://schemas.klm.com.au">
+  <Application>MSR</Application>
+  <InstitutionID>BBB</InstitutionID>
+  <ClientID>MSRAS1</ClientID>
+  <AccessID>1015204901</AccessID>
+  <BranchNumber>88Z2</BranchNumber>
+  <UserADM>ADM445</UserADM>
+  <TokenMaintenance>ADD</TokenMaintenance>
+  <TokenSerialNumber>AVT898970517</TokenSerialNumber>
+</bbb:MaintainSecurityRequest>

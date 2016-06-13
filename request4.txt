@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bbl:GetVIPRequest>
+  <Application>GHB</Application>
+  <Institution>KLM</Institution>
+  <AccessID>143901</AccessID>
+  <Filter>Physical</Filter>
+</bbl:GetVIPRequest>

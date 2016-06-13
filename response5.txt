@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<InqResponse xmlns:xyz="http://schemas.lbm.com.au">
+  <serviceName>FraudReportRequest</serviceName>
+  <memberbranchcode>88</memberbranchcode>
+  <customernumber>0026419713</customernumber>
+  <memberno>01</memberno>
+  <memberfirstname>DVD</memberfirstname>
+  <membermiddlename/>
+  <memberbirthdate>12/04/1975</memberbirthdate>
+  <memberlastname>DSVC</memberlastname>
+  <currentaddress1>12 FDSF ST</currentaddress1>
+  <currentaddress2>DFASDF</currentaddress2>
+  <currentcity>SFDGSDFG</currentcity>
+  <currentstate>OS</currentstate>
+  <currentpcode>8888</currentpcode>
+  <previousaddress1>TEst Test</previousaddress1>
+  <previousaddress2/>
+  <previouscity>Tes</previouscity>
+  <previousstate>OS</previousstate>
+  <previouspcode>8888</previouspcode>
+  <accounttype/>
+  <loanamount/>
+  <gender/>
+  <associationcode/>
+  <subject>1</subject>
+  <yearsataddr>5</yearsataddr>
+  <driverlicence>12345</driverlicence>
+  <homephoneareacode/>
+  <homephonenumber/>
+  <employername>RFDS</employername>
+  <workphoneareacode/>
+  <workphonenumber/>
+  <inquirytype/>
+  <inqsearchdays>00</inqsearchdays>
+  <reccount>000</reccount>
+  <totalrec>000</totalrec>
+</InqResponse>

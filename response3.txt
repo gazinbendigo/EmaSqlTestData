@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NS1:AliasResponse xmlns:NS1="urn:ben:xsd:piplatform.001">
+  <NS1:aliasDetails>
+    <tma:identifier>
+      <tma:type>EMAL</tma:type>
+      <tma:value>bill.blogs@bendigobank.com.au</tma:value>
+    </tma:identifier>
+    <NS1:name>Terry Towling</NS1:name>
+    <NS1:servicer>X2P</NS1:servicer>
+    <tma:account_details>
+      <tma:identification>123</tma:identification>
+      <tma:scheme_name>
+        <tma:code>BBAN</tma:code>
+        <tma:proprietary/>
+      </tma:scheme_name>
+      <tma:issuer>00</tma:issuer>
+      <tma:AccountOwner>Account owner name</tma:AccountOwner>
+    </tma:account_details>
+  </NS1:aliasDetails>
+  <NS1:auditDetails userId="adm25"/>
+  <NS1:customer>
+    <NS1:customerIdentifier>1234567890</NS1:customerIdentifier>
+  </NS1:customer>
+</NS1:AliasResponse>

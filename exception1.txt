@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bbl:ExceptionResponse xmlns:htlk="http://schemas.klm.com.au">
+    <Exception>
+        <Code>123456</Code>
+        <Description>Something went wrong</Description>
+    </Exception>
+</bbl:ExceptionResponse>

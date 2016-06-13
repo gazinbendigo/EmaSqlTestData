@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NS1:GetVIPResponse>
+  <NS1:requestId>9f01f02525af42f983be84df66849419</NS1:requestId>
+  <NS1:userId>DEDD280143901</NS1:userId>
+</NS1:GetVIPResponse>

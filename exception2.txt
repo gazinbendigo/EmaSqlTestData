@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bbl:FaultResponse xmlns:htlk="http://schemas.klm.com.au">
+    <Fault>
+        <Code>87654321</Code>
+        <Description>A Fault occured</Description>
+    </Fault>
+</bbl:FaultResponse>

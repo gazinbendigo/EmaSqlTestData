@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns1:definitions xmlns:ns1="http://schemas.xmlsoap.org/ns1/" xmlns="http://schemas.xmlsoap.org/ns1/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/ns1" xmlns:http="http://schemas.xmlsoap.org/ns1/http/" targetNamespace="http://thomas-bayer.com/blz/">
+<ns1:documentation>BLZService</ns1:documentation>
+<ns1:message name="getBank">
+<ns1:part name="parameters" element="tns:getBank"/>
+</ns1:message>
+<ns1:message name="getBankResponse">
+<ns1:part name="parameters" element="tns:getBankResponse"/>
+</ns1:message>
+<ns1:portType name="BLZServicePortType">
+<ns1:operation name="getBank">
+<ns1:input message="tns:getBank"/>
+<ns1:output message="tns:getBankResponse" />
+</ns1:operation>
+</ns1:portType>
+<ns1:binding name="BLZServiceSOAP11Binding" type="tns:BLZServicePortType">
+<soap:binding style="document">
+<ns1:operation name="getBank">
+<soap:operation style="document" soapAction=""/>
+<ns1:input>
+<soap:body use="literal"/>
+</ns1:input>
+<ns1:output>
+<soap:body use="literal"/>
+</ns1:output>
+</ns1:operation>
+</ns1:binding>
+<ns1:binding name="BLZServiceSOAP12Binding" type="tns:BLZServicePortType">
+<soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+<ns1:operation name="getBank">
+<soap12:operation style="document" soapAction=""/>
+<ns1:input>
+<soap12:body use="literal"/>
+</ns1:input>
+<ns1:output>
+<soap12:body use="literal"/>
+</ns1:output>
+</ns1:operation>
+</ns1:binding>
+<ns1:binding name="BLZServiceHttpBinding" type="tns:BLZServicePortType">
+<http:binding verb="POST"/>
+<ns1:operation name="getBank">
+<http:operation location="BLZService/getBank"/>
+<ns1:input>
+<ns1:content>content</ns1:content>
+</ns1:input>
+<ns1:output>
+<ns1:content>content</ns1:content>
+</ns1:output>
+</ns1:operation>
+</ns1:binding>
+<ns1:service name="BLZService">
+<ns1:port name="BLZServiceSOAP11port_http" binding="tns:BLZServiceSOAP11Binding">
+<soap:address location="http://www.thomas-bayer.com/axis2/services/BLZService"/>
+</ns1:port>
+<ns1:port name="BLZServiceSOAP12port_http" binding="tns:BLZServiceSOAP12Binding">
+<soap12:address location="http://www.thomas-bayer.com/axis2/services/BLZService"/>
+</ns1:port>
+<ns1:port name="BLZServiceHttpport" binding="tns:BLZServiceHttpBinding">
+<http:address location="http://www.thomas-bayer.com/axis2/services/BLZService"/>
+</ns1:port>
+</ns1:service>
+</ns1:definitions>
