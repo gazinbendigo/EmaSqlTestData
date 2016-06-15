@@ -5,7 +5,7 @@ package main.java.au.com.babl.test;
  */
 public class DAOTestSuite
 {
-    private ConsumerDAOTestManager consumerTestManager;
+    private ApplicationDAOTestManager consumerTestManager;
     private EnvironmentDAOTestManager environmentTestManager;
     private HubLogsDAOTestManager hubLogsTestManager;
     private int region = 0;
@@ -18,7 +18,7 @@ public class DAOTestSuite
     public DAOTestSuite(int id)
     {
         region = id == 0 ? 0:id;
-        consumerTestManager = new ConsumerDAOTestManager(id);
+        consumerTestManager = new ApplicationDAOTestManager(id);
         environmentTestManager = new EnvironmentDAOTestManager(id);
         hubLogsTestManager = new HubLogsDAOTestManager(id);
     }

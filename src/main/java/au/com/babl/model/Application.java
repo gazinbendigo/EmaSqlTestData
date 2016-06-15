@@ -22,8 +22,9 @@ public class Application implements Serializable
         applicationLogInd = 1;
     }
 
-    public Application(String name, String code, String type, int logInd)
+    public Application(int appId, String name, String code, String type, int logInd)
     {
+        applicationId = appId;
         applicationName = name;
         applicationCode = code;
         applicationType = type;

@@ -8,7 +8,7 @@ import java.util.ArrayList;
 /**
  * Created by holly on 08/06/2016.
  */
-public class ConsumerDAOTestManager extends CommonDAOTestManager
+public class ApplicationDAOTestManager extends CommonDAOTestManager
 {
     private static final String CREATE_TABLE = "CREATE TABLE APPLICATION (APPLICATION_ID MEDIUMINT NOT NULL AUTO_INCREMENT, APPLICATION_NME VARCHAR(60) NOT NULL, APPLICATION_CDE VARCHAR(30) NOT NULL, APPLICATION_TYPE_IND VARCHAR(1) NOT NULL, APPLICATION_LOG_IND INT NOT NULL, PRIMARY KEY (APPLICATION_ID))";
     private static final String DROP_TABLE = "DROP TABLE APPLICATION";
@@ -16,7 +16,7 @@ public class ConsumerDAOTestManager extends CommonDAOTestManager
     private static final String CREATE_PROCEDURE_GET_ALL_CONSUMERS = "CREATE DEFINER=`root`@`localhost` PROCEDURE `pGetApplicationConsumers`() BEGIN SELECT APPLICATION_ID, APPLICATION_NME, APPLICATION_CDE, APPLICATION_LOG_IND FROM APPLICATION WHERE APPLICATION_TYPE_IND = 'C'; END";
     private ArrayList<Application> applications = new ArrayList<Application>();
 
-    public ConsumerDAOTestManager(int id)
+    public ApplicationDAOTestManager(int id)
     {
         super(id);
     }
@@ -42,7 +42,12 @@ public class ConsumerDAOTestManager extends CommonDAOTestManager
         for(int i = 0; i < appCode.length; i++)
         {
             String c = ((i + 1) > 14) ? "P":"C";
-            applications.add(new Application(appName[i], appCode[i], c, 1));
+            Application app = new Application();
+            app.setApplicationName(appName[i]);
+            app.setApplicationCode(appCode[i]);
+            app.setApplicationType(c);
+            app.setApplicationLogInd(1);
+            applications.add(app);
         }
 
     }
