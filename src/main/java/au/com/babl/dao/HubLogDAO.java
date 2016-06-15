@@ -41,7 +41,7 @@ public class HubLogDAO
             ps.setLong(1, log.getRequestId());
             ps.setLong(2, log.getMessageId());
             ps.setLong(3, log.getRequestServiceId());
-            ps.setDate(4, new java.sql.Date(log.getDateOfLog().getTime()));
+            ps.setDate(4, new Date(log.getDateOfLog().getTime()));
             ps.setString(5, log.getBrand());
             ps.setString(6, log.getApplicationCode());
             ps.setString(7, log.getApplications());
