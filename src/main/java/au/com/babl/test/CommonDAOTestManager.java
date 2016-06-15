@@ -15,6 +15,7 @@ public abstract class CommonDAOTestManager
     private String environment;
     private String environmentName;
     protected static final String[] ENVIRONMENTS = {"EMA_DEV", "EMA_SV", "EMA_UAT"};
+    private static final String CREATE_PROCEDURE_GET_CONSUMERS = "";
 
     CommonDAOTestManager(int id)
     {

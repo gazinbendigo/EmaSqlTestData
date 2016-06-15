@@ -66,29 +66,4 @@ public class EnvironmentManager implements Serializable
         return environments;
     }
 
-
-
-
-    public void insertEnvironments()
-    {
-        final String[] environmentNames = {"HUBA1","HUBA2", "HUBB1", "HUBB2", "HUBC1", "HUBC2", "HUBD1", "HUBD2", "HUBF1", "HUBG1", "HUBG2", "HUBI1", "HUBI2", "HUBJ1"};
-        final String[] environmentDescriptions = {"Development", "Development2", "System Test", "System Test2", "System Integration", "System Integration2", "UAT", "UAT2", "Stressed and Volumed", "Tan", "Red", "Gold", "Bob", "Lime"};
-        environmentDAO = new EnvironmentDAO(conn);
-        for (int i = 0; i < environmentDescriptions.length; i++)
-        {
-            Environment bean = new Environment(new Long(0), environmentNames[i], environmentDescriptions[i]);
-            try
-            {
-                environmentDAO.insertEnvironment(bean);
-            }
-            catch (SQLException e)
-            {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-            }
-        }
-
-    }
-
-
 }

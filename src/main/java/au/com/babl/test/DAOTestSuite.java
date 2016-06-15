@@ -29,7 +29,7 @@ public class DAOTestSuite
     {
         System.out.println("****************  Hub Environment: " + CommonDAOTestManager.ENVIRONMENTS[region] + "  ****************");
         consumerTestManager.refreshTableComponents();
-        System.out.println("Consumer Table Done.");
+        System.out.println("Application Table Done.");
         environmentTestManager.refreshTableComponents();
         System.out.println("Environment Table Done.");
         hubLogsTestManager.refreshTableComponents();

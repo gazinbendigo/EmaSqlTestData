@@ -15,7 +15,7 @@ import java.util.List;
 public class EnvironmentDAO implements Serializable, DAOProperties
 {
     private static final long serialVersionUID = 2049398824131580339L;
-    private static final String INSERT_ENVIRONMENT = "INSERT INTO ENVIRONMENT (ENV_NAME, ENV_DESCRIPTION) VALUES (?,?)";
+    private static final String INSERT_ENVIRONMENT = "INSERT INTO ENVIRONMENT (ENV_NAME, ENV_DESCRIPTION, ORDER_ID) VALUES (?,?,?)";
     private static final String GET_ENVIRONMENT_BY_ID = "SELECT ENV_ID, ENV_NAME, ENV_DESCRIPTION FROM dbo.ENVIRONMENT WHERE ENV_ID = ?";
     private static final String GET_ALL_ENVIRONMENTS = "SELECT ENV_ID, ENV_NAME, ENV_DESCRIPTION FROM dbo.ENVIRONMENT";
     private static final String GET_ENVIRONMENT_BY_NAME = "SELECT ENV_ID, ENV_NAME, ENV_DESCRIPTION FROM dbo.ENVIRONMENT WHERE ENV_NAME = ?";
@@ -56,6 +56,7 @@ public class EnvironmentDAO implements Serializable, DAOProperties
         {
             ps.setString(1, environment.getName());
             ps.setString(2, environment.getDescription());
+            ps.setInt(3, environment.getOrder());
             rowCount = rowCount + ps.executeUpdate();
         }
         catch (SQLException se)
@@ -114,6 +115,7 @@ public class EnvironmentDAO implements Serializable, DAOProperties
         env.setId(rs.getLong(1));
         env.setName(rs.getString(2));
         env.setDescription(rs.getString(3));
+        env.setOrder(rs.getInt(4));
         return env;
     }
 

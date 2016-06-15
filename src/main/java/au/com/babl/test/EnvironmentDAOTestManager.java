@@ -10,10 +10,10 @@ import java.util.ArrayList;
  */
 public class EnvironmentDAOTestManager extends CommonDAOTestManager
 {
-    private static final String CREATE_TABLE = "CREATE TABLE ENVIRONMENT (ENV_ID MEDIUMINT NOT NULL AUTO_INCREMENT, ENV_NAME VARCHAR(50) NOT NULL, ENV_DESCRIPTION VARCHAR(60) NOT NULL,PRIMARY KEY (ENV_ID))";
+    private static final String CREATE_TABLE = "CREATE TABLE ENVIRONMENT (ENV_ID MEDIUMINT NOT NULL AUTO_INCREMENT, ORDER_ID INT NOT NULL, ENV_NAME VARCHAR(50) NOT NULL, ENV_DESCRIPTION VARCHAR(60) NOT NULL, PRIMARY KEY (ENV_ID))";
     private static final String DROP_TABLE = "DROP TABLE ENVIRONMENT";
-    private static final String DROP_PROCEDURE_GET_ALL_ENVIRONMENTS = "DROP PROCEDURE pGetAllEnvironments";
-    private static final String CREATE_PROCEDURE_GET_ALL_ENVIRONMENTS = "CREATE DEFINER=`root`@`localhost` PROCEDURE `pGetAllEnvironments` () BEGIN SELECT ENV_ID, ENV_NAME, ENV_DESCRIPTION FROM ENVIRONMENT; END";
+    private static final String DROP_PROCEDURE_GET_ALL_ENVIRONMENTS = "DROP PROCEDURE pGetEnvironments";
+    private static final String CREATE_PROCEDURE_GET_ALL_ENVIRONMENTS = "CREATE DEFINER=`root`@`localhost` PROCEDURE `pGetEnvironments` () BEGIN SELECT ENV_ID, ORDER_ID, ENV_NAME, ENV_DESCRIPTION FROM ENVIRONMENT; END";
     private ArrayList<Environment> environments = new ArrayList<Environment>();
 
 
@@ -37,17 +37,17 @@ public class EnvironmentDAOTestManager extends CommonDAOTestManager
     @Override
     protected void generateTestData()
     {
-        String[] environmentNames = {"HUBDL", "HUBA1", "HUBA2", "HUBB1", "HUBB2", "HUBC1", "HUBC2", "HUBD1", "HUBD2", "HUBF1", "HUBG1", "HUBG2", "HUBI1", "HUBI2", "HUBJ1"};
+        String[] environmentNames = {"HUBLD", "HUBA1", "HUBA2", "HUBB1", "HUBB2", "HUBC1", "HUBC2", "HUBD1", "HUBD2", "HUBF1", "HUBG1", "HUBG2", "HUBI1", "HUBI2", "HUBJ1"};
         String[] descriptions = {"Development", "Development-old", "Development2", "System Test", "System Test2", "System Integration", "System Integration2", "UAT", "UAT2", "Stressed and Volumed", "Tan", "Red", "Gold", "Bob", "Lime", };
         for(int i = 0; i < environmentNames.length; i++)
         {
-            environments.add(createEnvironment((i + 1), environmentNames[i], descriptions[i]));
+            environments.add(createEnvironment((i + 1), environmentNames[i], descriptions[i], (i +1)));
         }
     }
 
-    private Environment createEnvironment(int id, String code, String description)
+    private Environment createEnvironment(int id, String code, String description, int order)
     {
-        return new Environment(new Long(id), code, description);
+        return new Environment(new Long(id), code, description, order);
     }
 
     @Override

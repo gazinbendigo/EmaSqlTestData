@@ -1,7 +1,7 @@
 package main.java.au.com.babl.manager;
 
-import main.java.au.com.babl.dao.ConsumerDAO;
-import main.java.au.com.babl.model.Consumer;
+import main.java.au.com.babl.dao.ApplicationDAO;
+import main.java.au.com.babl.model.Application;
 
 import java.io.Serializable;
 import java.sql.Connection;
@@ -10,23 +10,23 @@ import java.sql.SQLException;
 /**
  * Created by holly on 08/06/2016.
  */
-public class ConsumerManager implements Serializable
+public class ApplicationManager implements Serializable
 {
     private static final long serialVersionUID = 8335976457214060778L;
     private Connection conn;
 
-    public ConsumerManager(Connection connection)
+    public ApplicationManager(Connection connection)
     {
         conn = connection;
     }
 
 
-    public void insertConsumer(Consumer consumer)
+    public void insertConsumer(Application application)
     {
-        ConsumerDAO dao = new ConsumerDAO(conn);
+        ApplicationDAO dao = new ApplicationDAO(conn);
         try
         {
-            dao.insertConsumer(consumer);
+            dao.insertApplication(application);
         }
         catch (SQLException e)
         {

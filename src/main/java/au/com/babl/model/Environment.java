@@ -9,23 +9,22 @@ public class Environment
     private Long id;
     private String name;
     private String description;
-    private String labelName;
-
+    private int order;
 
     public Environment()
     {
         id = new Long(0);
         name = "";
         description = "";
-        labelName = "";
+        order = 0;
     }
 
-    public Environment(Long id, String name, String description)
+    public Environment(Long id, String name, String description, int order)
     {
         this.id = id;
         this.name = name;
         this.description = description;
-        this.labelName = "";
+        this.order = order;
     }
 
     /**
@@ -76,24 +75,16 @@ public class Environment
         this.description = description;
     }
 
-    /**
-     *
-     * @return the display name
-     */
-    public String getLabelName()
+
+    public int getOrder()
     {
-        return getName() + " - " + getDescription();
+        return order;
     }
 
-    /**
-     *
-     * @param labelName
-     */
-    public void setLabelName(String labelName)
+    public void setOrder(int order)
     {
-        this.labelName = labelName;
+        this.order = order;
     }
-
 
     @Override
     public boolean equals(Object other)
